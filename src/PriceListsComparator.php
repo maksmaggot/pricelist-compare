@@ -13,8 +13,9 @@ class PriceListsComparator
                 continue;
             }
 
-            if (!$product->equals($secondPriceList->get($key))) {
-                $compareResult->appendUpdated($secondPriceList->get($key));
+            $secondPriceListProduct = $secondPriceList->get($key);
+            if (!$product->equals($secondPriceListProduct)) {
+                $compareResult->appendUpdated($secondPriceListProduct);
             }
         }
 
